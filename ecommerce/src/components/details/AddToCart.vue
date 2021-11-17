@@ -2,7 +2,7 @@
 <template>
   <div class="row">
     <div class="col-3">
-      <label class="sr-only" for="inlineFormInputName2">Quantity</label>
+      <label class="sr-only" for="inlineFormInputName2">quantity</label>
       <input type="number" v-model="quantity" class="form-control mb-2 mr-sm-2" />
     </div>
     <button
@@ -10,13 +10,13 @@
       @click.stop="addCart({product, quantity})"
       type="button"
       class="btn btn-primary btn-lg btn-block col-9"
-    >ADD TO CART</button>
+    >Adicionar ao carrinho </button>
     <button
       v-else
       @click.stop="removeCart(product.id)"
       type="button"
       class="btn btn-primary btn-lg btn-block col-9"
-    >REMOVE FROM CART</button>
+    >Remover Produto</button>
   </div>
 </template>
 <script>

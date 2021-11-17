@@ -1,4 +1,3 @@
-//cs-ecommerce/src/views/home/Cart.vue
 <template>
   <div class="container" style="padding: 30px">
     <div class="row d-flex justify-content-center">
@@ -13,15 +12,15 @@
           <p class="h4">{{ item.name }}</p>
           <div class="row">
             <div class="mr-2">
-              <p>Unique Price</p>
+              <p>Preço</p>
               <p>${{ item.price }}</p>
             </div>
             <div class="mr-2">
-              <p>Total Price</p>
+              <p>Valor total</p>
               <p>${{ item.price * item.quantity }}</p>
             </div>
             <div>
-              <p>Quantity</p>
+              <p>Quantidade</p>
               <p>{{ item.quantity }}</p>
             </div>
           </div>
@@ -31,7 +30,7 @@
         >
           <p class="h4">Total</p>
           <div>
-            <p>Total Price</p>
+            <p>Valor total</p>
             <p>${{ totalPrice }}</p>
           </div>
         </div>
@@ -39,7 +38,7 @@
           @click="checkout()"
           type="button"
           class="btn btn-primary btn-lg btn-block mt-4"
-        >Checkout</button>
+        >Finalizar compra</button>
       </div>
     </div>
   </div>

@@ -5,9 +5,9 @@ product estado - irá armazenar um produto específico
 cart estado - armazenará a lista de produtos no carrinho
 */
 export default function () {
-    return {
-      products: [],
-      product: {},
-      cart: []
-    }
+  return {
+    products: [],
+    product: {},
+    cart: []
   }
+}

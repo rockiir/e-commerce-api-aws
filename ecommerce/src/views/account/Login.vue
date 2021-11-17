@@ -1,34 +1,40 @@
 <template>
-  <div>
-    <div class="container" style="padding-top: 10%">
+  <div class="background">
+    <div class="container" style="padding-top: 5%">
       <div class="row d-flex justify-content-center">
         <div class="col-5 text-left login-form-container">
           <div class="d-flex justify-content-center">
-            <img src="https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" width="150" alt="">
+            <img src="https://logodownload.org/wp-content/uploads/2016/09/Spotify-logo.png" width="180vh" alt="Nome da marca" class="Logo-login">
           </div>
           <div>
-            <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
+            <div class="form-group form-floating mb-3">
+              <label for="exampleInputEmail1" class="font-weight-bold text-secondary" >Digite o seu endereço de e-mail</label>
               <input
                 type="email"
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                placeholder="Josesantos@email.com"
+                
               />
               <small
                 id="emailHelp"
                 class="form-text text-muted"
-              >We'll never share your email with anyone else.</small>
+              >Nos nunca compartilhamos seu e-mail externamente</small>
             </div>
             <div class="form-group">
-              <label for="exampleInputPassword1">Password</label>
-              <input type="password" class="form-control" id="exampleInputPassword1" />
+              <label for="exampleInputPassword1" class="font-weight-bold text-secondary">Digite sua senha</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="*********"
+/>
+              <a href="#" class="text-secondary">Esqueci a senha</a>
             </div>
             <div class="form-group form-check">
               <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              <label class="form-check-label text-secondary" for="exampleCheck1">Lembrar minha senha</label>
             </div>
             <button @click="login()" type="submit" class="btn btn-primary btn-block">Login</button>
+            <p class="message text-secondary">Não registrada? <a href="#">Crie sua conta</a></p>
+
           </div>
         </div>
       </div>
@@ -47,9 +53,13 @@ export default {
 </script>
 
 <style>
+
 .form-control {
   border-radius: 0%;
-  height: 50px;
+  height: 40px;
+  border:none;
+  border-bottom: 1px solid;
+  margin-bottom:2vh;
 }
 .login-form-container {
   padding: 20px;
@@ -67,4 +77,25 @@ export default {
 .btn:focus {
   background: teal;
 }
+.login-form-container{
+  background-color: #ffff;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+-webkit-box-shadow: 1px 3px 14px 0px rgba(50, 50, 50, 1);
+-moz-box-shadow:    1px 3px 14px 0px rgba(50, 50, 50, 1);
+box-shadow:         1px 3px 14px 0px rgba(50, 50, 50, 1);
+}
+.Logo-login{
+  margin:5vh;
+}
+.background{
+background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);  
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  height: 100vh;
+  width: 100vw;     
+}
+
 </style>

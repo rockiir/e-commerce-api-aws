@@ -10,9 +10,9 @@
       <div class="col-6 text-left text-justify">
         <div class="display-3">{{ product.name }}</div>
         <p class="lead text-justify">{{ product.content }}</p>
-        <div>
-          <p class="h3">Price</p>
-          <p class="h2">${{ product.price }}</p>
+        <div class="preco">
+          <p class="h3">Preço</p>
+          <p class="h2 text-danger">R$: {{ product.price }}</p>
         </div>
         <AddToCart :product="product" v-if="user.uid" />
       </div>
@@ -53,4 +53,11 @@ export default {
 .card * {
   max-height: 85vh;
 }
+.preco{
+  text-align: right;
+  margin-top:25vh;
+  
+}
+
+
 </style>

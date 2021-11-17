@@ -3,16 +3,17 @@
  * 
  */
 <template>
-  <div class="card mb-4 shadow-sm">
-    <img :src="product.imageUrl" class="card-img-top product-image" />
+  <div class="card mb-3 shadow-sm">
+    <img :src="product.imageUrl" class="card-img-top product-image " />
     <div class="card-body">
-      <h5 class="card-title text-left">{{ product.name }}</h5>
+      <h5 class="nome card-title text-center">{{ product.name }}</h5>
       <div class="row">
+        <div class=""><p class="h4 preco-produto font-weight-bold ">R$: {{ product.price }}</p></div>
         <router-link
           type="button"
-          class="btn btn-primary btn-lg"
+          class="text-center btn btn-primary btn-lg btn-block"
           :to="'/details/' + product.id"
-        >Details</router-link>
+        >Detalhes</router-link> 
       </div>
     </div>
   </div>
@@ -27,6 +28,21 @@ export default {
 
 <style>
 .card .product-image {
-  height: 300px;
+  height: 200px;
+  width:auto;
+}
+.preco-produto{
+  text-align:center;
+}
+
+img {
+  padding:2vh;
+  
+}
+.card-title{
+  margin:2px;
+}
+.card-body{
+  padding-top:0px;
 }
 </style>

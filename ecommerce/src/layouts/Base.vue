@@ -3,7 +3,9 @@
   <div>
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <router-link class="navbar-brand" to="/">CS-eCommerce</router-link>
+        <router-link class="navbar-brand" to="/"><img src="https://logodownload.org/wp-content/uploads/2016/09/Spotify-logo.png" width="180vh" alt="Nome da marca" class="Logo">
+</router-link>
+
         <div class="ml-auto">
           <div v-if="user.photoURL">
             <img
@@ -20,7 +22,7 @@
               <span class="badge badge-danger badge-pill">{{ cart.length }}</span>
             </router-link>
           </div>
-          <router-link v-else class="btn btn-primary my-2 my-sm-0" to="/login">Login</router-link>
+          <router-link v-else class="btn btn-primary my-2 my-sm-0" to="/login">Entrar</router-link>
         </div>
       </nav>
     </div>
@@ -48,6 +50,8 @@ nav {
   font-weight: bold;
   font-size: 25px;
   color: #ffffff !important;
+    font-family:Roboto;
+
 }
 .profile-image {
   width: 50px;

@@ -7,8 +7,6 @@
  */
 import axios from "axios"
 
-//Action to get products list
-
 //adiciona os produtos
 export function getProducts({ commit }) {
     let url = "https://my-json-server.typicode.com/Nelzio/ecommerce-fake-json/products";
@@ -32,7 +30,9 @@ export function productDetails({ commit }, id) {
 //Adiciona ao carrinho
 export function addCart({ commit, getters }, payload) {
     let cart = getters.cart //receberá como parâmetro um objeto de produto e o adicionará ao array cart.
-    cart.push(payload)//pega o que está no carrinho e coloca em uma variável temporária
+    let data = payload.product
+    data["quantity"] = payload.quantity
+    cart.push(data)//pega o que está no carrinho e coloca em uma variável temporária
     commit("setCart", cart)//produto permanece temporariamente
 }
 

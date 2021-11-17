@@ -6,6 +6,7 @@ em seguida, armazená-lo em nosso estado userData
 */ 
 import router from '../../router'
 import Axios from 'axios';
+
 export function login({ commit }) {
     let url = 'https://randomuser.me/api/';
     Axios.get(url).then(function (response) {
