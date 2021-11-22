@@ -1,4 +1,5 @@
 //cs-ecommerce/src/Layout/Base.html
+//Menu inicial
 <template>
   <div>
     <div>
@@ -8,6 +9,7 @@
 
         <div class="ml-auto">
           <div v-if="user.photoURL">
+            <router-link class="btn btn-primary my-2 my-sm-0" to="/Cadastrar">CadastrarProduto</router-link>
             <img
               :src="user.photoURL"
               class="img-thumbnail profile-image"
@@ -37,14 +39,14 @@ export default {
   name: "Base",
   computed: {
     ...mapGetters("account", ["user"]),
-    ...mapGetters("product", ["cart"])
+    ...mapGetters("product", ["cart"]),
   }
 };
 </script>
 
 <style>
 nav {
-  background-color: teal;
+  background-color: rgb(3, 165, 38);
 }
 .navbar-brand {
   font-weight: bold;

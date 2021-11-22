@@ -14,9 +14,18 @@ const routes = [
     ]
   },
   {
+    path: '/login2',
+    component: () => import('../views/account/Login2.vue')
+  },
+  {
     path: '/login',
     component: () => import('../views/account/Login.vue')
   },
+  {
+    path: '/cadastrar',
+    component: () => import('../views/account/cadastrarProduto.vue')
+  }
+  
 ]
 
 const router = new VueRouter({

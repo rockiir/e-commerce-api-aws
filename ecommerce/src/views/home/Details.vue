@@ -8,14 +8,18 @@
         </div>
       </div>
       <div class="col-6 text-left text-justify">
+        <div>
         <div class="display-3">{{ product.name }}</div>
-        <p class="lead text-justify">{{ product.content }}</p>
         <div class="preco">
           <p class="h3">Preço</p>
           <p class="h2 text-danger">R$: {{ product.price }}</p>
         </div>
-        <AddToCart :product="product" v-if="user.uid" />
+        <p class="lead text-justify">{{ product.content }}</p>
       </div>
+      <div>
+      <AddToCart :product="product" v-if="user.uid" />
+      </div>
+    </div>
     </div>
   </div>
 </template>
@@ -44,6 +48,10 @@ export default {
 </script>
 
 <style>
+.display-3{
+  margin-bottom:3vh;
+  font-family: 'Roboto';
+}
 .container-fluid {
   padding: 30px;
 }
@@ -54,10 +62,13 @@ export default {
   max-height: 85vh;
 }
 .preco{
-  text-align: right;
-  margin-top:25vh;
+  text-align: left;
+  margin-top:2vh;
+  margin-bottom:10vh;
   
 }
-
+.lead{
+  margin-bottom:10vh;
+}
 
 </style>

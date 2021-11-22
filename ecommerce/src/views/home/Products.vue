@@ -4,7 +4,7 @@
   <div style="padding: 20px;">
     <div class="container">
       <div class="imagem-banner" >  
-        <img src="https://i.imgur.com/rh25f6O.png" alt="Italian Trulli ">
+        <img src="https://i.imgur.com/gAmZm3r.jpg" alt="Companhia dos organicos" width="1120">
 </div>
       <div class="row">
         <div class="col-md-3" v-for="product in products" :key="product.id">
@@ -38,6 +38,7 @@ export default {
 
 <style>
 .imagem-banner{
-  height: 70vh;
+  height: auto;
+  width: 60vh ;
 }
 </style>
