@@ -9,7 +9,8 @@
       </div>
       <div class="col-6 text-left text-justify">
         <div>
-        <div class="display-3">{{ product.name }}</div>
+        <div class="display-3 text-uppercase">{{ product.name }}</div>
+
         <div class="preco">
           <p class="h3">Preço</p>
           <p class="h2 text-danger">R$: {{ product.price }}</p>
@@ -18,7 +19,9 @@
       </div>
       <div>
       <AddToCart :product="product" v-if="user.uid" />
+      
       </div>
+          <img class="" src="https://i.imgur.com/mD2jN2T.png" width="50" alt/>
     </div>
     </div>
   </div>

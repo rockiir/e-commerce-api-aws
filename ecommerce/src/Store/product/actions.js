@@ -9,23 +9,44 @@ import axios from "axios"
 
 //adiciona os produtos
 export function getProducts({ commit }) {
-    let url = "https://my-json-server.typicode.com/Nelzio/ecommerce-fake-json/products";
+    let url = "http://ec2-18-215-185-41.compute-1.amazonaws.com:5000/listar";
     axios.get(url).then((response) => {
         commit("setProducts", response.data);
     }).catch(error => {
          console.log(error);
     });
 }
-
 //detalhes do produto
 export function productDetails({ commit }, id) {
-    let url = "https://my-json-server.typicode.com/Nelzio/ecommerce-fake-json/products";
+    let url = "http://ec2-18-215-185-41.compute-1.amazonaws.com:5000/listar";
     axios.get(url, { params: { id: id } }).then((response) => {
-        commit("setProduct", response.data[0]);
+        commit("setProduct", response.data[id]);
+        //console.log(id);
+        console.log(response.data)
     }).catch(function (error) {
         console.log(error);
     });
 }
+//detalhes do produto
+/*export function productDetails({ commit }, id) {
+    let url = "http://ec2-44-198-188-49.compute-1.amazonaws.com:5000/listar";
+    axios.get(url, { params: { id: id } }).then((response) => {
+        response.data.find(id)
+        /*for (let index = 0; index < response.data.find; index++){
+            if (response.data.find === id);
+            index == id;
+        
+        }
+        console.log(response.data.indexOf(elem.id));
+        commit("setProduct",response.data );
+
+
+         console.log(response.data[])
+         console.log(id)
+    }).catch(function (error) {
+        console.log(error);
+    });
+}*/
 
 //Adiciona ao carrinho
 export function addCart({ commit, getters }, payload) {
@@ -45,7 +66,10 @@ export function removeCart({ commit, getters }, id) {
             if (element.id !== id) {
                 cart.push(element)
             }
+            console.log(element.id);
+            console.log(id)
         }
+      
     }
     commit("setCart", cart)
 }

@@ -3,7 +3,7 @@
     <div class="row d-flex justify-content-center">
       <div class="list-group col-8">
         <a
-          v-for="item in cart"
+          v-for="item in fav"
           :key="item.id"
           href="#"
           class="list-group-item list-group-item-action d-flex justify-content-between align-items-center"
@@ -13,21 +13,15 @@
           <div class="row">
             <div class="mr-2">
               <p>Preço</p>
-              <p>R$: {{ item.price }}</p>
+              <p>${{ item.price }}</p>
             </div>
             <div class="mr-2">
               <p>Valor total</p>
-              <p>R$: {{ item.price * item.quantity }}</p>
-              
-            </div>
-            
-            <div class="mr-2">
-              <p>Quantidade</p>
-              <p>{{ item.quantity }}</p>
+              <p>${{ item.price * item.quantity }}</p>
             </div>
             <div>
-                  <img class="lixo" src="https://i.imgur.com/yMsUpda.png" width="50" alt/>
-
+              <p>Quantidade</p>
+              <p>{{ item.quantity }}</p>
             </div>
           </div>
         </a>
@@ -37,7 +31,7 @@
           <p class="h4">Total</p>
           <div>
             <p>Valor total</p>
-            <p>R$: {{ totalPrice }}</p>
+            <p>${{ totalPrice }}</p>
           </div>
         </div>
         <button
@@ -51,45 +45,8 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from "vuex";
-export default {
-  name: "Cart",
-  data() {
-    return {
-      totalPrice: 0,
-    };
-  },
-  computed: {
-    ...mapGetters("product", ["cart"]),
-    ...mapGetters("account", ["user"]),
-  },
-  methods: {
-    ...mapActions("product", ["removeCart"]),
-    calcPrice() {
-      this.cart.forEach((element) => {
-        this.totalPrice += element.price * element.quantity;
-      });
-    },
-    checkout() {
-      const vm = this;
-      setTimeout(() => {
-        vm.removeCart();
-        alert("Pedido realizado com sucesso");
-        vm.$router.push("/");
-      }, 2000);
-    },
-  },
-  mounted() {
-    this.calcPrice();
-  },
-};
+
 </script>
 
 <style>
-.lixo{
-  margin-left: 3vh;
-}
-.mr-2{
-  margin-left: 5vh;
-}
 </style>

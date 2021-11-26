@@ -10,7 +10,9 @@ const routes = [
     children: [ 
       { path: '', component: () => import('../views/home/Products.vue') },
       { path: 'details/:idProduct', component: () => import('../views/home/Details.vue') },
-      { path: 'cart', component: () => import('../views/home/Cart.vue') }
+      { path: 'cart', component: () => import('../views/home/Cart.vue') },
+      {path: '/cadastrar',component: () => import('../views/account/cadastrarProduto.vue')},    
+      {path: '/fav',component: () => import('../views/home/fav.vue')}    
     ]
   },
   {
@@ -21,10 +23,7 @@ const routes = [
     path: '/login',
     component: () => import('../views/account/Login.vue')
   },
-  {
-    path: '/cadastrar',
-    component: () => import('../views/account/cadastrarProduto.vue')
-  }
+  
   
 ]
 

@@ -1,10 +1,10 @@
 <template>
-  <div class="background">
+  <div class="background bgb">
     <div class="container" style="padding-top: 5%">
       <div class="row d-flex justify-content-center">
         <div class="col-5 text-left login-form-container">
           <div class="d-flex justify-content-center">
-            <img src="https://logodownload.org/wp-content/uploads/2016/09/Spotify-logo.png" width="180vh" alt="Nome da marca" class="Logo-login">
+            <img src="https://i.imgur.com/TbMfks6.png" width="180vh" alt="Nome da marca" class="Logo-login">
           </div>
           <div>
             <div class="form-group form-floating mb-3">
@@ -90,12 +90,14 @@ box-shadow:         1px 3px 14px 0px rgba(50, 50, 50, 1);
   margin:5vh;
 }
 .background{
-background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);  
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   height: 100vh;
   width: 100vw;     
 }
+.bgb{
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);  
 
+}
 </style>

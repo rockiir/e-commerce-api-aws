@@ -4,21 +4,35 @@
   <div>
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <router-link class="navbar-brand" to="/"><img src="https://logodownload.org/wp-content/uploads/2016/09/Spotify-logo.png" width="180vh" alt="Nome da marca" class="Logo">
+        <router-link class="navbar-brand" to="/"><img src="https://i.imgur.com/3WdM02G.png" width="180vh" alt="Companhia dos organicos" class="Logo">
 </router-link>
 
         <div class="ml-auto">
           <div v-if="user.photoURL">
-            <router-link class="btn btn-primary my-2 my-sm-0" to="/Cadastrar">CadastrarProduto</router-link>
+            <router-link class="teste btn btn-primary " to="/">VERDURAS</router-link>
+            <router-link class="teste btn btn-primary " to="/">LEGUMES</router-link>
+            <router-link class="teste btn btn-primary " to="/">FRUTAS</router-link>
+            <router-link class="teste btn btn-primary " to="/">VARIADOS</router-link>
+            <router-link class="cadastrar btn btn-secondary my-2 my-sm-0" to="/Cadastrar">CadastrarProduto</router-link>
+             
             <img
               :src="user.photoURL"
               class="img-thumbnail profile-image"
               alt
             />
-            <router-link class="btn btn-primary my-2 my-sm-0" to="/cart">
+           <router-link class="btn btn-primary my-2 my-sm-0" to="/">
+              <img
+                src="https://i.imgur.com/mD2jN2T.png"
+                width="50"
+                alt
+              />
+              <span class="badge badge-danger badge-pill">2</span>
+            </router-link>
+
+            <router-link class="btn btn-secondary my-2 my-sm-0" to="/cart">
               <img
                 src="https://pngimg.com/uploads/shopping_cart/shopping_cart_PNG38.png"
-                width="50"
+                width="60"
                 alt
               />
               <span class="badge badge-danger badge-pill">{{ cart.length }}</span>
@@ -46,8 +60,21 @@ export default {
 
 <style>
 nav {
-  background-color: rgb(3, 165, 38);
+  background-color:#378842;
 }
+.btn-primary{
+  background:#378842 !important;
+}
+.btn-danger{
+  background:#e00044 !important;
+}
+
+.teste{
+  margin-right:10vh !important;
+    text-align: left !important;
+
+}
+
 .navbar-brand {
   font-weight: bold;
   font-size: 25px;
@@ -65,7 +92,7 @@ nav {
 .btn {
   border-radius: 0%;
   font-weight: bold;
-  background: teal;
+  background: #378842;
   border: teal;
 }
 .btn:hover {
@@ -75,6 +102,6 @@ input {
   border-radius: 0%;
 }
 .btn:focus {
-  background: teal;
+  background: #378842;
 }
 </style>

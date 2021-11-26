@@ -3,7 +3,7 @@
  * 
  */
 <template>
-  <div class="card mb-3 shadow-sm">
+  <div class="card mb-3 shadow-sm">    
     <img :src="product.imageUrl" class="card-img-top product-image " />
     <div class="card-body">
       <h5 class="nome card-title text-center">{{ product.name }}</h5>
@@ -12,7 +12,7 @@
         <router-link
           type="button"
           class="text-center btn btn-primary btn-lg btn-block"
-          :to="'/details/' + product.id"
+          :to="'/details/' + (product.id-1)"
         >Detalhes</router-link> 
       </div>
     </div>
@@ -24,6 +24,7 @@ export default {
     name: "ProductCard",
     props: ["product"]
 };
+//console.log(props)
 </script>
 
 <style>
